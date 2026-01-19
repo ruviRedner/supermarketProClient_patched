@@ -32,6 +32,25 @@ export function RecommendationsPanel() {
   });
 
   if (!enabled) return null;
+  if (isLoading) {
+  return <Alert severity="info">Thinking…</Alert>;
+}
+
+if (isError) {
+  return (
+    <Alert severity="info">
+      No recommendations right now.
+    </Alert>
+  );
+}
+
+if (!data || data.recommendations.length === 0) {
+  return (
+    <Alert severity="info">
+      No recommendations right now.
+    </Alert>
+  );
+}
 
   return (
     <Card variant="outlined">

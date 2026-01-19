@@ -2,7 +2,6 @@ import { useMemo } from "react";
 import { useNavigate } from "react-router-dom";
 import { Alert, Box, Stack, Typography } from "@mui/material";
 
-import { RecommendationsPanel } from "./RecommendationsPanel";
 
 import { CartSummaryCard } from "./CartSummaryCard";
 import { useCartStore, useCartTotalPrice } from "../../../modules/cart/cartStore";
@@ -53,7 +52,6 @@ export function Cart() {
               onCheckout={() => navigate("/checkout")}
             />
 
-            <RecommendationsPanel />
           </Stack>
         )}
       </Stack>
