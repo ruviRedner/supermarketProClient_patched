@@ -55,7 +55,7 @@ export function Register() {
     if (data?.issues?.length) {
       setError(data.issues[0].message);
     } else {
-      setError(data?.message || "Login failed");
+      setError(data?.message || "register failed");
     }
   } else {
     setError("Unexpected error");
