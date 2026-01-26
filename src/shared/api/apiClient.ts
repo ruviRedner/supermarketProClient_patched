@@ -12,7 +12,6 @@ apiClient.interceptors.request.use((config) => {
   const token = localStorage.getItem("accessToken");
   if (token) {
     config.headers = config.headers ?? {};
-    // @ts-expect-error axios header typing varies by version
     config.headers.Authorization = `Bearer ${token}`;
   }
   return config;
